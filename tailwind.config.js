@@ -34,6 +34,17 @@ export default {
           ond: '#F1F5E8',
           mut: '#4F5E3A',
         },
+        // Brand = lime (same in light and dark mode)
+        brand: {
+          DEFAULT: '#C5FF5C',
+          hover: '#B3F03F',
+          deep: '#8FCC1F',
+          soft: '#EBFFC2',
+          on: '#171717',
+        },
+      },
+      boxShadow: {
+        glow: '0 10px 30px -8px rgba(197,255,92,0.55)',
       },
       fontFamily: {
         display: ['"Familjen Grotesk"', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],

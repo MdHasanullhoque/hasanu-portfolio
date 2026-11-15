@@ -4,6 +4,7 @@ import LiveCard from '../components/LiveCard'
 import Reveal from '../components/Reveal'
 import Marquee from '../components/Marquee'
 import CodeArt from '../components/CodeArt'
+import HeroStack from '../components/HeroStack'
 
 // Page-only lists live here, next to the classes that style them.
 const marqueeWords = ['Frontend', 'Admin', 'UI Design', 'Operations', 'Code', 'Coordination']
@@ -90,8 +91,10 @@ export default function Home() {
           </div>
         </div>
 
+
+
         {/* Profile photo placeholder card */}
-        <div className="relative mx-auto w-full max-w-sm md:max-w-none">
+        {/* <div className="relative mx-auto w-full max-w-sm md:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line bg-card [background-image:radial-gradient(circle_at_20%_18%,rgba(157,184,122,0.5),transparent_55%),radial-gradient(circle_at_82%_85%,rgba(74,89,104,0.42),transparent_55%)]">
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
               <span className="font-display text-[clamp(5rem,16vw,9rem)] font-bold leading-none tracking-tight">
@@ -118,7 +121,13 @@ export default function Home() {
               Bangladesh
             </span>
           </div>
-        </div>
+        </div> */}
+
+        {/* Stacked pathway cards */}
+        <HeroStack />
+
+
+
       </section>
 
       {/* ───────────── 2. MARQUEE ───────────── */}

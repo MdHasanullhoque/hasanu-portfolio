@@ -5,23 +5,23 @@ import ThemeToggle from "./ThemeToggle";
 // Order matters: Administration is left of Technology everywhere.
 // Active colours: neutral pages = ink, Administration = sage, Technology = slate.
 const links = [
-  { to: "/", label: "Home", active: "bg-ink text-bg" },
-  { to: "/about", label: "About", active: "bg-ink text-bg" },
+  { to: "/", label: "Home", active: "bg-[#C5FF5C] text-[#171717]" },
+  { to: "/about", label: "About", active: "bg-[#C5FF5C] text-[#171717]" },
   {
     to: "/administration",
     label: "Administration",
-    active: "bg-admin text-admin-on",
-    dot: "bg-admin",
-    activeDot: "bg-admin-on",
+    active: "bg-[#C5FF5C] text-[#171717]",
+    dot: "bg-[#C5FF5C] text-[#171717]",
+    activeDot: "bg-white",
   },
   {
     to: "/technology",
     label: "Technology",
-    active: "bg-tech text-white",
-    dot: "bg-tech dark:bg-tech-light",
+    active: "bg-[#C5FF5C] text-[#171717]",
+    dot: "bg-[#C5FF5C] text-[#171717]",
     activeDot: "bg-white",
   },
-  { to: "/contact", label: "Contact", active: "bg-ink text-bg" },
+  { to: "/contact", label: "Contact", active: "bg-[#C5FF5C] text-[#171717]" },
 ];
 
 export default function Navbar() {

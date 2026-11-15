@@ -255,3 +255,14 @@ Spec-e shudhu title chhilo, tai ei text gulo ami neutral bhabe likhechi. Tomar p
 - About page-er card text (Professional journey, Technology interests)
 - Contact intro-r last line ("Send a message, or find me on GitHub.")
 - Project code window-er sketch line (label "illustration", tai asol code na)
+
+
+Kaj	Color
+Lime green (button, highlight, heading accent)	
+#C5FF5C
+Dark (footer bg, dark button)	
+#171717
+Page background (cream)	
+#FAF9F6
+Footer border/divider	
+#333333

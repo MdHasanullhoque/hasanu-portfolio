@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@config "../tailwind.config.js";
 
 /* Neutral palette as RGB channels (so Tailwind opacity modifiers work).
    Light: bg #FAF9F6, bg2 #F5F2EA, card #FFFFFF, ink #171717, mut #666666, line #EAE8E1, dk #171717 */
