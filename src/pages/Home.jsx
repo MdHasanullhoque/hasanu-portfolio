@@ -61,7 +61,7 @@ export default function Home() {
           <h1 className="font-display text-[clamp(2.5rem,8.5vw,5.6rem)] font-bold leading-[0.95] tracking-tight">
             HELLO, I’M
             <br />
-            <span className="relative inline-block pb-2 after:absolute after:bottom-0 after:left-0 after:h-[0.09em] after:w-full after:rounded-full after:bg-[linear-gradient(90deg,#9DB87A,#4A5968)] after:content-['']">
+            <span className="hero-name-underline relative inline-block pb-2 text-[0.88em]">
               HASANULL HOQUE.
             </span>
           </h1>
@@ -151,7 +151,20 @@ export default function Home() {
 
         <div className="grid items-stretch gap-5 md:grid-cols-2">
           {/* Administration (left) */}
-          <Reveal className="h-full">
+          <Reveal
+            className="relative mx-auto w-full max-w-full overflow-hidden rounded-[1.75rem] md:mx-0"
+            transitionClassName="transition-[opacity,transform,width,max-height] duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+            fromClassName="h-[100px] w-[100px] max-h-[100px] -translate-x-4 translate-y-8 opacity-100"
+            shownClassName="h-auto w-full max-h-[1200px] translate-x-0 translate-y-0 opacity-100"
+          >
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 z-20 grid place-items-center rounded-[1.75rem] bg-admin-soft transition-opacity duration-500 group-data-[revealed=true]/reveal:opacity-0 motion-reduce:transition-none"
+            >
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-admin font-mono text-lg font-bold text-admin-on">
+                01
+              </span>
+            </div>
             <LiveCard
               spot="rgba(157,184,122,0.4)"
               className="h-full rounded-[1.75rem] bg-admin-soft p-6 text-admin-on sm:p-8 data-[live=true]:shadow-[0_22px_60px_-22px_rgba(157,184,122,0.95)] data-[live=true]:ring-2 data-[live=true]:ring-admin"
@@ -217,7 +230,21 @@ export default function Home() {
           </Reveal>
 
           {/* Technology (right) */}
-          <Reveal className="h-full" delay={120}>
+          <Reveal
+            className="relative mx-auto w-full max-w-full overflow-hidden rounded-[1.75rem] md:mx-0"
+            delay={180}
+            transitionClassName="transition-[opacity,transform,width,max-height] duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+            fromClassName="h-[100px] w-[100px] max-h-[100px] translate-x-4 translate-y-8 opacity-100"
+            shownClassName="h-auto w-full max-h-[1200px] translate-x-0 translate-y-0 opacity-100"
+          >
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 z-20 grid place-items-center rounded-[1.75rem] bg-tech-deep transition-opacity duration-500 group-data-[revealed=true]/reveal:opacity-0 motion-reduce:transition-none"
+            >
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-tech font-mono text-lg font-bold text-white">
+                02
+              </span>
+            </div>
             <LiveCard
               spot="rgba(191,201,211,0.2)"
               className="h-full rounded-[1.75rem] bg-tech-deep p-6 text-tech-ond sm:p-8 data-[live=true]:shadow-[0_22px_60px_-22px_rgba(74,89,104,0.95)] data-[live=true]:ring-2 data-[live=true]:ring-tech-light [&_a:focus-visible]:outline-tech-light"

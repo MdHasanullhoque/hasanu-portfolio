@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 
 // Fade + rise 14px, once, when scrolled into view.
-export default function Reveal({ children, className = '', delay = 0 }) {
+export default function Reveal({
+  children,
+  className = '',
+  delay = 0,
+  fromClassName = 'translate-y-[14px] opacity-0',
+  shownClassName = 'translate-y-0 opacity-100',
+  transitionClassName = 'transition-[opacity,transform] duration-700 ease-out',
+}) {
   const ref = useRef(null)
   const [shown, setShown] = useState(false)
 
@@ -28,9 +35,10 @@ export default function Reveal({ children, className = '', delay = 0 }) {
   return (
     <div
       ref={ref}
+      data-revealed={shown ? 'true' : 'false'}
       style={{ transitionDelay: shown ? `${delay}ms` : '0ms' }}
-      className={`transition-[opacity,transform] duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
-        shown ? 'translate-y-0 opacity-100' : 'translate-y-[14px] opacity-0'
+      className={`group/reveal ${transitionClassName} motion-reduce:transform-none motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
+        shown ? shownClassName : fromClassName
       } ${className}`}
     >
       {children}

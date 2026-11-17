@@ -60,6 +60,10 @@ export default {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' },
         },
+        signalSweep: {
+          from: { transform: 'translateX(-110%)' },
+          to: { transform: 'translateX(450%)' },
+        },
         typeLine: {
           from: { clipPath: 'inset(0 100% 0 0)' },
           to: { clipPath: 'inset(0 0 0 0)' },
@@ -72,6 +76,7 @@ export default {
       animation: {
         'fade-up': 'fadeUp 450ms ease-out backwards',
         marquee: 'marquee 30s linear infinite',
+        'signal-sweep': 'signalSweep 3.6s ease-in-out infinite',
         'type-line': 'typeLine 450ms steps(24, end) forwards',
         tick: 'tick 350ms ease-out forwards',
       },

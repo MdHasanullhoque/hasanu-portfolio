@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
+import CodeArt from './CodeArt'
 
 // Short previews only; full lists stay on the Home page / their own pages.
 const adminPreview = ['Office Administration', 'Vendor Coordination', 'Procurement & Purchasing']
-const techPreview = ['React.js', 'Tailwind CSS', 'Node.js', 'Firebase']
+const techCode = ['const idea = "digital";', 'buildExperience(idea)']
 
 // Shared hover/focus behaviour. The card that is hovered or focused
 // straightens up, lifts, and jumps above its sibling so it reads as "the one".
 const cardBase =
-  'group absolute inset-x-0 block rounded-[1.75rem] p-5 sm:p-6 ' +
+  'group absolute inset-x-0 block rounded-[1.75rem] p-4 sm:p-5 ' +
   'shadow-[0_18px_40px_-20px_rgba(0,0,0,0.45)] ' +
   'transition duration-300 ease-out ' +
   'hover:z-30 focus-visible:z-30 hover:rotate-0 focus-visible:rotate-0 ' +
@@ -17,7 +18,7 @@ const cardBase =
 
 export default function HeroStack() {
   return (
-    <div className="relative mx-auto h-[31rem] w-full max-w-sm sm:h-[34rem] md:max-w-none">
+    <div className="relative mx-auto h-[28rem] w-full max-w-[22rem] sm:h-[30rem] sm:max-w-sm md:h-[31rem] md:max-w-[25rem]">
       {/* Card 1 (back, top): Administration */}
       <Link
         to="/administration"
@@ -73,16 +74,7 @@ export default function HeroStack() {
           Ideas turned into digital experiences through code and design.
         </p>
 
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {techPreview.map((tag) => (
-            <li
-              key={tag}
-              className="rounded-full border border-tech-light/30 bg-white/5 px-3 py-1 text-xs font-semibold text-tech-ond"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
+        <CodeArt lines={techCode} label="typing preview" autoPlay compact className="mt-3" />
 
         <span
           aria-hidden="true"

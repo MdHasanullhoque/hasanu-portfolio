@@ -45,6 +45,28 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-name-underline::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0.09em;
+  border-radius: 9999px;
+  content: '';
+  background: linear-gradient(90deg, #c5ff5c 0%, #c5ff5c 40%, #f2ffc8 50%, #c5ff5c 60%, #c5ff5c 100%);
+  background-size: 200% 100%;
+  animation: underline-sweep 2.4s linear infinite;
+}
+
+@keyframes underline-sweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
 :focus-visible {
   outline: 2px solid rgb(var(--ink));
   outline-offset: 3px;
@@ -61,5 +83,10 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .hero-name-underline::after {
+    animation: none;
+    background: #c5ff5c;
   }
 }
