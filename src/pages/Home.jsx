@@ -54,7 +54,7 @@ export default function Home() {
         <div>
           <p className="mb-5 inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium uppercase tracking-[0.16em] text-mut sm:text-xs">
             <span aria-hidden="true" className="h-2 w-2 bg-tech dark:bg-tech-light" />
-            One identity. Two professional worlds.
+            Two worlds. Equal passion.
             <span aria-hidden="true" className="h-2 w-2 rounded-full bg-admin" />
           </p>
 
@@ -62,7 +62,7 @@ export default function Home() {
             HELLO, I’M
             <br />
             <span className="relative inline-block pb-2 after:absolute after:bottom-0 after:left-0 after:h-[0.09em] after:w-full after:rounded-full after:bg-[linear-gradient(90deg,#9DB87A,#4A5968)] after:content-['']">
-              HASANULL.
+              HASANULL HOQUE.
             </span>
           </h1>
 
@@ -142,7 +142,7 @@ export default function Home() {
             Two pathways
           </p>
           <h2 className="mb-3 font-display text-[clamp(1.5rem,3.2vw,2.2rem)] font-bold">
-            One identity. Two professional worlds.
+            Two worlds. Equal passion.
           </h2>
           <p className="mb-8 max-w-xl text-[0.95rem] text-mut">
             Building Digital Experiences. Managing Real-World Operations.
