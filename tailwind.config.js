@@ -64,6 +64,11 @@ export default {
           from: { transform: 'translateX(-110%)' },
           to: { transform: 'translateX(450%)' },
         },
+        toastEnter: {
+          '0%': { opacity: '0', transform: 'translate3d(18px, 10px, 0) scale(0.94)' },
+          '70%': { opacity: '1', transform: 'translate3d(-3px, -2px, 0) scale(1.02)' },
+          '100%': { opacity: '1', transform: 'translate3d(0, 0, 0) scale(1)' },
+        },
         typeLine: {
           from: { clipPath: 'inset(0 100% 0 0)' },
           to: { clipPath: 'inset(0 0 0 0)' },
@@ -77,6 +82,7 @@ export default {
         'fade-up': 'fadeUp 450ms ease-out backwards',
         marquee: 'marquee 30s linear infinite',
         'signal-sweep': 'signalSweep 3.6s ease-in-out infinite',
+        'toast-enter': 'toastEnter 700ms cubic-bezier(0.16, 1, 0.3, 1) 500ms both',
         'type-line': 'typeLine 450ms steps(24, end) forwards',
         tick: 'tick 350ms ease-out forwards',
       },
